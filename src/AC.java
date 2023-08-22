@@ -1,10 +1,15 @@
-interface ac {
+interface AC {
+    String ac1 = "High-powered" ;
+    String ac2 = "Low-powered" ;
+
+    // customer can choose
+
     String AcType();
     int val();
 }
 
 //high-powered AC is configured
-class highPowered implements ac{
+class highPowered implements AC{
 
     public String AcType()
     {
@@ -17,7 +22,7 @@ class highPowered implements ac{
 }
 
 //lowPowered AC is configured
-class lowPowered implements ac{
+class lowPowered implements AC{
 
     public String AcType()
     {

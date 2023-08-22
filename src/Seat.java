@@ -6,7 +6,7 @@ interface Seat {
 class group1 implements Seat{
     public String Cargroup()
     {
-        return "Car group : Racing Car and it has " + this.seatnumber() + " number of seats. ";
+        return "Racing Car";
     }
 
     public int seatnumber()
@@ -18,7 +18,7 @@ class group1 implements Seat{
 class group2 implements Seat{
     public String Cargroup()
     {
-        return "Car group : Private Car and it has " + this.seatnumber() + " number of seats. ";
+        return "Private Car";
     }
 
     public int seatnumber()
@@ -30,8 +30,7 @@ class group2 implements Seat{
 class group3 implements Seat{
     public String Cargroup()
     {
-        return "Car group : SUV and it has " + this.seatnumber() + " number of seats. ";
-        
+        return "SUV";
     }
 
     public int seatnumber()
@@ -43,7 +42,7 @@ class group3 implements Seat{
 class group4 implements Seat{
     public String Cargroup()
     {
-        return "Car group : Military Vehicle and it has " + this.seatnumber() + " number of seats. ";
+        return "Military Vehicle";
     }
 
     public int seatnumber()
