@@ -1,37 +1,20 @@
-interface AI {
-    String ai1 = "Asia Based Automated Driving AI";
-    String ai2 = "USA Based Automated Driving AI";
-
-    // Customer can NOT choose
-    // It is based on GEOGRAPHICAL AREA
-
-    String Area();
-    int num();
+public interface AI {
+    public String getRegion();
+    public double getCost();
 }
-
-// Asia based Automated Driving AI
-class area1 implements AI{
-
-    public String Area()
-    {
-        return "Asia Based Automated Driving AI";
+class AsiaAutomatedAI implements AI {
+    public String getRegion() {
+        return "Asia";
     }
-    public int num()
-    {
-        return 1;
+    public double getCost() {
+        return 15000;
     }
 }
-
-
-//USA based Automated Driving AI
-class area2 implements AI{
-
-    public String Area()
-    {
-        return "USA Based Automated Driving AI";
+class USAAutomatedAI implements AI {
+    public String getRegion() {
+        return "USA";
     }
-    public int num()
-    {
-        return 2;
+    public double getCost() {
+        return 25000;
     }
 }

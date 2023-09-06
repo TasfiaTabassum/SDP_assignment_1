@@ -1,23 +1,27 @@
-interface Bumper {
-    public String BUmperType();
-    public int value();
+class looseBumper extends CarDecor{
+    public looseBumper(Car car) {
+        this.car = car;
+    }
+    @Override
+    public double getCarPrice() {
+        return car.getCarPrice() + 5500;
+    }
+    @Override
+    public String getCarDetails() {
+        return car.getCarDetails() + "\nLoose Bumper";
+    }
 }
 
-class type1 implements Bumper{
-    public String BUmperType(){
-        return "Loosen Big Bumper";
+class tightBumper extends CarDecor{
+    public tightBumper(Car car) {
+        this.car = car;
     }
-    public int value(){
-        return 1;
+    @Override
+    public double getCarPrice() {
+        return car.getCarPrice() + 7500;
     }
-}
-
-
-class type2 implements Bumper{
-    public String BUmperType(){
-        return "Tight Small Bumper";
-    }
-    public int value(){
-        return 2;
+    @Override
+    public String getCarDetails() {
+        return car.getCarDetails() + "\nTight Bumper";
     }
 }

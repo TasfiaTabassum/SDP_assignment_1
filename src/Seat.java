@@ -1,52 +1,45 @@
-interface Seat {
-    String Cargroup();
-    int seatnumber();  
+public interface Seat {
+    String seatType();
+
+    int getSeatCount();
 }
-
-class RacingCarSeat implements Seat{
-    public String Cargroup()
-    {
-        return "Racing Car";
+class privateCarSeat implements Seat {
+    @Override
+    public String seatType() {
+        return "Private Car Seat";
     }
-
-    public int seatnumber()
-    {
-        return 1;
-    }
-}
-
-class group2 implements Seat{
-    public String Cargroup()
-    {
-        return "Private Car";
-    }
-
-    public int seatnumber()
-    {
+    @Override
+    public int getSeatCount() {
         return 5;
     }
 }
-
-class group3 implements Seat{
-    public String Cargroup()
-    {
-        return "SUV";
+class racingCarSeat implements Seat {
+    @Override
+    public String seatType() {
+        return "Racing Car Seat";
     }
-
-    public int seatnumber()
-    {
+    @Override
+    public int getSeatCount() {
+        return 1;
+    }
+}
+class SUVCarSeat implements Seat {
+    @Override
+    public String seatType() {
+        return "SUV Seat";
+    }
+    @Override
+    public int getSeatCount() {
         return 15;
     }
 }
-
-class group4 implements Seat{
-    public String Cargroup()
-    {
-        return "Military Vehicle";
+class militaryCarSeat implements Seat {
+    @Override
+    public String seatType() {
+        return "Military Car Seat";
     }
-
-    public int seatnumber()
-    {
+    @Override
+    public int getSeatCount() {
         return 7;
     }
 }

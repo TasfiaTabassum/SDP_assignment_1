@@ -1,35 +1,24 @@
-interface AC {
-    String ac1 = "High-powered" ;
-    String ac2 = "Low-powered" ;
-
-    // customer can choose
-
-    String AcType();
-    int val();
+public interface AC {
+    public String getACType();
+    public double getACPrice();
 }
-
-//high-powered AC is configured
-class highPowered implements AC{
-
-    public String AcType()
-    {
-        return "High-powered";
+class HighPoweredAC implements AC {
+    @Override
+    public String getACType() {
+        return "HighPowered";
     }
-    public int val()
-    {
-        return 1;
+    @Override
+    public double getACPrice() {
+        return 4500;
     }
 }
-
-//lowPowered AC is configured
-class lowPowered implements AC{
-
-    public String AcType()
-    {
-        return "Low-powered";
+class LowPoweredAC implements AC {
+    @Override
+    public String getACType() {
+        return "LowPowered";
     }
-    public int val()
-    {
-        return 2;
+    @Override
+    public double getACPrice() {
+        return 3000;
     }
 }

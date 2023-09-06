@@ -1,5 +1,5 @@
-public class openRoof extends CarDecorator{
-    public OpenRoofDecor(Car car) {
+public class openRoof extends CarDecor{
+    public openRoof(Car car) {
         this.car = car;
     }
     @Override

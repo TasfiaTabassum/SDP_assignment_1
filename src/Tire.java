@@ -1,61 +1,44 @@
-interface tire {
-    String TireName();
-    int value();
+public interface Tire {
+    public String getTireType();
+    public double getTirePrice();
 }
-
-// features of 'snow' tire
-class tire1 implements tire{
-
+class SnowTire implements Tire {
     @Override
-    public String TireName(){
+    public String getTireType() {
         return "Snow";
     }
-
-    public int value(){
-        return 1;
-    }
-
-}
-
-
-// features of 'Spare' tire
-class tire2 implements tire{
-
     @Override
-    public String TireName(){
+    public double getTirePrice() {
+        return 950;
+    }
+}
+class SpareTire implements Tire {
+    @Override
+    public String getTireType() {
         return "Spare";
     }
-
-    public int value(){
-        return 2;
-    }
-
-}
-
-// features of 'Whiteall' tire
-class tire3 implements tire{
-
     @Override
-    public String TireName(){
+    public double getTirePrice() {
+        return 850;
+    }
+}
+class WhitewallTire implements Tire {
+    @Override
+    public String getTireType() {
         return "Whitewall";
     }
-
-    public int value(){
-        return 3;
-    }
-
-}
-
-// features of 'slick' tire
-class tire4 implements tire{
-
     @Override
-    public String TireName(){
+    public double getTirePrice() {
+        return 750;
+    }
+}
+class SlickTire implements Tire {
+    @Override
+    public String getTireType() {
         return "Slick";
     }
-
-    public int value(){
-        return 4;
+    @Override
+    public double getTirePrice() {
+        return 1300;
     }
-
 }
