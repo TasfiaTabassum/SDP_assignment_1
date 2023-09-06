@@ -1,80 +1,41 @@
-// Component Interface
-interface Car {
-    String getDescription();
-    double getCost();
-}
-
-// Concrete Component (Basic Car Model)
-class BasicCar implements Car {
-    @Override
-    public String getDescription() {
-        return "Basic Car";
-    }
-
-    @Override
-    public double getCost() {
-        return 20000;
-    }
-}
-
-// Decorator Interface
-interface CarDecorator extends Car {
-    // Additional methods for customizing/decorating
-}
-
-// Concrete Decorators (Customization Options)
-class CustomizedRainShieldDecorator implements CarDecorator {
-    private Car car;
-    private double cost;
-
-    public CustomizedRainShieldDecorator(Car car, double cost) {
+class ThickRainShield extends CarDecorator{
+    public ThickRainShield(Car car) {
         this.car = car;
-        this.cost = cost;
     }
-
     @Override
-    public String getDescription() {
-        return car.getDescription() + ", Customized Rain Shield";
+    public double getCarPrice() {
+        return car.getCarPrice() + 1000;
     }
-
     @Override
-    public double getCost() {
-        return car.getCost() + cost;
+    public String getCarDetails() {
+        return car.getCarDetails() + "\nThick Rain Shield";
     }
 }
 
-class BumperDecorator implements CarDecorator {
-    private Car car;
-    private double cost;
-
-    public BumperDecorator(Car car, double cost) {
+class ThinRainShield extends CarDecorator{
+    public ThinRainShield(Car car) {
         this.car = car;
-        this.cost = cost;
     }
-
     @Override
-    public String getDescription() {
-        return car.getDescription() + ", Bumper";
+    public double getCarPrice() {
+        return car.getCarPrice() + 500;
     }
-
     @Override
-    public double getCost() {
-        return car.getCost() + cost;
+    public String getCarDetails() {
+        return car.getCarDetails() + "\nThin Rain Shield";
     }
 }
 
-
-public class rainShield {
-    public static void main(String[] args) {
-        Car basicCar = new BasicCar();
-
-        Car customizedCar = new CustomizedRainShieldDecorator(basicCar, 500);
-        System.out.println("Customized Car: " + customizedCar.getDescription() + " - Cost: $" + customizedCar.getCost());
-
-        Car bumperCustomizedCar = new BumperDecorator(customizedCar, 800);
-        System.out.println("Bumper Customized Car: " + bumperCustomizedCar.getDescription() + " - Cost: $" + bumperCustomizedCar.getCost());
+class CurvedRainShield extends CarDecorator{
+    public CurvedRainShield(Car car) {
+        this.car = car;
+    }
+    @Override
+    public double getCarPrice() {
+        return car.getCarPrice() + 1500;
+    }
+    @Override
+    public String getCarDetails() {
+        return car.getCarDetails() + "\nCurved Rain Shield";
     }
 }
- 
-    
-

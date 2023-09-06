@@ -3,7 +3,7 @@ interface Seat {
     int seatnumber();  
 }
 
-class group1 implements Seat{
+class RacingCarSeat implements Seat{
     public String Cargroup()
     {
         return "Racing Car";
